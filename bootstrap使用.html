@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        /* 利用我們自己寫的樣式覆蓋原先樣式 */
+        .login{
+            width: 80px;
+        }
+        [class^='col']{
+            border: 1px solid;
+            
+        }
+        
+    </style>
+  </head>
+  <body>
+    <!-- container響應式 -->
+    <!-- 預設分為12份 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-12">1</div>
+            <div class="col-lg-3 col-md-4 col-xs-12">2</div>
+            <div class="col-lg-3 col-md-4 col-xs-12">3</div>
+            <div class="col-lg-3 col-md-4 col-xs-12">4</div>
+        </div> 
+        <!-- 如果孩子份數相加等於12，則孩子能占滿整個container -->
+        <div class="row">
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-2">4</div>
+        </div> 
+        <!-- 如果孩子的份數相加 小於12則佔不滿container 會有空白-->
+        <div class="row">
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-1">4</div>
+        </div> 
+
+        <!-- 如果孩子的份數相加 大於12則 多的那一列會另起一行-->
+        <div class="row">
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-3">4</div>
+            
+        </div> 
+
+        <div class="row">
+            <div class="col-md-4 ">
+                <!-- 我們列嵌套最好加一行row元素 這樣可以取消父元素的padding值 而且高度自動和父親一樣高 -->
+                <div class="row">
+                    <div class="col-md-6">a</div>
+                    <div class="col-md-6">b</div>   
+                </div>
+                
+            </div>
+            <div class="col-md-4">2</div>
+            <div class="col-md-4">3</div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">左</div>
+            <!-- 偏移的份數就是 12 - 兩個盒子的份數 -->
+            <div class="col-md-4 offset-md-4">右</div>
+        </div>
+
+        <div class="row">
+            <!-- 如果只有一個盒子那就偏移(12-8)/2 8是中間格子的大小 除2是剩下的兩側要除2 -->
+            <div class="col-md-8 offset-md-2">中間</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-3">1</div>
+            <div class="col-sm-3">2</div>
+            <div class="col-sm-3 hidden-md">3</div>
+            <div class="col-sm-3">4</div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-success">Success</button>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+  </body>
+</html>
